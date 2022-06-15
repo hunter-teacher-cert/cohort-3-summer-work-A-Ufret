@@ -1,0 +1,3 @@
+* Methods for teaching Computer Science
+
+Place all assignments for the Methods class in this folder as directed by the course instructors.
