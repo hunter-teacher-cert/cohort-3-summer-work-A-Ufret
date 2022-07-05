@@ -104,7 +104,7 @@ public class Array2DPractice
   */
   public static char[][] copyBoard( char[][] original )
   {
-     char[][] copy = 
+     char[][] copy = new char[]
     /* YOUR AWESOME CODE HERE */
     return original;
   }
