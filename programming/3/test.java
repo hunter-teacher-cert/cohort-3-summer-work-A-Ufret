@@ -41,7 +41,7 @@ Created On: July 5, 2022
    other methods.
 */
 
-public class Array2DPractice
+public class test
 {
   public static char[][] buildBoard( int rows, int cols, char value )
   {
@@ -55,6 +55,7 @@ public class Array2DPractice
     }
     return board;
   }
+  
   /**
      pretty prints a 2D array of characters
      This should print the array as a grid
@@ -65,15 +66,13 @@ public class Array2DPractice
     {
       for (int j = 0; j < board[i].length; j++)
       {
-        System.out.print(board[i]
-                         [j]); 
+        System.out.print(board[i][j]+""); 
         
       }
+      System.out.println();
     }
   }
-  {
-   return original;
-  }
+  
 
 
   /**
@@ -100,6 +99,7 @@ public class Array2DPractice
   {
     /* YOUR AWESOME CODE HERE */
   }
+  
 
 
   /**
@@ -118,8 +118,9 @@ public class Array2DPractice
       }
     
     /* YOUR AWESOME CODE HERE */
-    return original;
-  }
+    
+
+
 
 
   /**
@@ -233,5 +234,4 @@ public class Array2DPractice
       can use array notation to also access individual
       elements
     */
-  }
-}
+  
