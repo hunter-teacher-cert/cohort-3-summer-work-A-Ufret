@@ -71,6 +71,10 @@ public class Array2DPractice
       }
     }
   }
+  {
+   return original;
+  }
+
 
   /**
      Parameters:
@@ -104,7 +108,15 @@ public class Array2DPractice
   */
   public static char[][] copyBoard( char[][] original )
   {
-     char[][] copy = new char[]
+     char[][] copy = new char[original.length][original[0].length];
+    for(int i=0; i < original.length; i++){
+      for(int j=0; j < original[0].length; j++){
+        copy[i][j] = original[i][j];
+      }
+    }
+    return copy;
+      }
+    
     /* YOUR AWESOME CODE HERE */
     return original;
   }
