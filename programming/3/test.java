@@ -66,7 +66,7 @@ public class test
     {
       for (int j = 0; j < board[i].length; j++)
       {
-        System.out.print(board[i][j]+""); 
+        System.out.print(board[i][j]+" "); 
         
       }
       System.out.println();
