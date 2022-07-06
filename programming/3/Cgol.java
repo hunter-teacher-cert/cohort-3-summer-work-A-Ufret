@@ -4,7 +4,7 @@ import java.util.*;
 /**
  * Group 9 July 6, 2022 Conway's Game of Life by Team AreWeSentientYet?
  * Sarah Mccoy
- * collaborators: Kirk Martin, Ashley Ufret, Parmanand M
+ * collaborators: Kirk Martin, Ashley Ufret, Parmanand Mohanlall
  */
 
 /**
@@ -60,22 +60,22 @@ public class Cgol
   //return number of living neigbours of board[r][c]
   public static int countNeighbours( char[][] board, int r, int c )
   {
-		int count =0;
-		for (int i = row-1; i < row+2; i++) {
-      for (int j = col-1; j < col+2; j++) {
+		int count = 0;
+		for (int i = r-1; i < r+2; i++) {
+      for (int j = c-1; j < c+2; j++) {
         if(i > -1 && 
 						i < board.length && 
-						!(row==i && col==j) &&
+						!(r==i && c==j) &&
 						j > -1 &&
-						j<board[0].length &&
-						board[i][j]=='x')
+						j < board[0].length &&
+						board[i][j]=='X')//Case sensitive!!! 
 					{
 						count++;
 					}
-						
-          
         }
       }
+		return count;
+		
   }
   
 
@@ -102,7 +102,7 @@ public class Cgol
   {
     
     char[][] board;
-    board = createNewBoard(25,25);
+    board = createNewBoard(10,10);
 
     //breathe life into some cells:
     setCell(board, 0, 0, 'X');
@@ -117,7 +117,7 @@ public class Cgol
     System.out.println("Gen X:");
     printBoard(board);
     System.out.println("--------------------------\n\n");
-
+		System.out.println("Cell (1,0) has " + countNeighbours(board,0,0) + " neighbors");
     //board = generateNextBoard(board);
 
     // System.out.println("Gen X+1:");
