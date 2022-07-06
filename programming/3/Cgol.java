@@ -34,20 +34,39 @@ public class Cgol
   }
 
 
-  //print the board to the terminal
+  //print the board to the terminal FROM KATE'S TEAM
   public static void printBoard( char[][] board )
   {
-		int rows = board.length;
-		int cols = board[0].length;
-		//The length of the 2D array is the number of rows in that array (number of sublists)
-		for (int i = 0; i < rows; i++) {
-			//The number of columns in the array is the same as the length of one of the rows, so just use the first one.
-      for (int j = 0; j < cols; j++) {
-        System.out.print(board[i][j] + " ");
+      // when printing, we'll put '.' for the dead cells just to be able see it
+      for (int i = 0; i < board.length; i++) 
+      {
+        for (int j = 0; j < board[i].length; j++) 
+        {
+          if (board[i][j] == ' ') 
+          {
+            System.out.print(". ");  
+          } 
+          else {
+            System.out.print(board[i][j] + " ");
+          }
+        }
+        System.out.println(); 
       }
-				System.out.println();
-  	}
   }
+  // //print the board to the terminal
+  // public static void printBoard( char[][] board )
+  // {
+		// int rows = board.length;
+		// int cols = board[0].length;
+		// //The length of the 2D array is the number of rows in that array (number of sublists)
+		// for (int i = 0; i < rows; i++) {
+		// 	//The number of columns in the array is the same as the length of one of the rows, so just use the first one.
+  //     for (int j = 0; j < cols; j++) {
+  //       System.out.print(board[i][j] + " ");
+  //     }
+		// 		System.out.println();
+  // 	}
+  // }
 
 
   //set cell (r,c) to val
@@ -87,15 +106,36 @@ public class Cgol
   */
   public static char getNextGenCell( char[][] board,int r, int c )
   {
-		return 'z';
+		if (board[r][c]=='X')
+		{
+			if (countNeighbours(board, r, c) == 2 || countNeighbours(board, r, c) == 3){
+				
+				return 'X';
+			}
+			else
+			{ 
+				return '.';
+			}
+		}
+		if (board[r][c]=='.')
+		{
+			if (countNeighbours(board, r, c) == 3 )
+			{
+				return 'X';
+			}
+			else
+			{ 
+				return '.';
+			}
+		}
+			return 'z';//needed a return, should only run if there is a problem.
   }
 
-
   //generate and return a new board representing next generation
-  // public static char[][] generateNextBoard( char[][] board )
-  // {
+  public static char[][] generateNextBoard( char[][] board )
+  {
 
-  // }
+  }
 
 
   public static void main( String[] args )
@@ -118,8 +158,8 @@ public class Cgol
     printBoard(board);
     System.out.println("--------------------------\n\n");
 		System.out.println("Cell (1,0) has " + countNeighbours(board,0,0) + " neighbors");
-    //board = generateNextBoard(board);
 
+    //board = generateNextBoard(board);
     // System.out.println("Gen X+1:");
     // printBoard(board);
     // System.out.println("--------------------------\n\n");
