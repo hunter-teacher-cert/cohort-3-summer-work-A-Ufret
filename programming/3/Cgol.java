@@ -58,9 +58,9 @@ public class Cgol
   // {
 		// int rows = board.length;
 		// int cols = board[0].length;
-		// //The length of the 2D array is the number of rows in that array (number of sublists)
+		
 		// for (int i = 0; i < rows; i++) {
-		// 	//The number of columns in the array is the same as the length of one of the rows, so just use the first one.
+		// 	
   //     for (int j = 0; j < cols; j++) {
   //       System.out.print(board[i][j] + " ");
   //     }
@@ -96,8 +96,6 @@ public class Cgol
 		return count;
 		
   }
-  
-
 
   /**
      precond: given a board and a cell
@@ -108,16 +106,17 @@ public class Cgol
   {
 		if (board[r][c]=='X')
 		{
-			if (countNeighbours(board, r, c) == 2 || countNeighbours(board, r, c) == 3){
+			if (countNeighbours(board, r, c) == 2 ||
+					countNeighbours(board, r, c) == 3){
 				
 				return 'X';
 			}
 			else
 			{ 
-				return '.';
+				return ' ';//the period is only in the print function, not in the original array
 			}
 		}
-		if (board[r][c]=='.')
+		if (board[r][c]==' ')
 		{
 			if (countNeighbours(board, r, c) == 3 )
 			{
@@ -125,7 +124,7 @@ public class Cgol
 			}
 			else
 			{ 
-				return '.';
+				return ' ';
 			}
 		}
 			return 'z';//needed a return, should only run if there is a problem.
@@ -135,7 +134,17 @@ public class Cgol
   public static char[][] generateNextBoard( char[][] board )
   {
 
+		int rows = board.length;
+		int cols = board[0].length;
+		
+		for (int i = 0; i < rows; i++) {
+      for (int j = 0; j < cols; j++) {
+        board[i][j] = getNextGenCell(board, i, j);
+      }
+  	}
+		return board;//will print this from the main method
   }
+  
 
 
   public static void main( String[] args )
@@ -157,13 +166,12 @@ public class Cgol
     System.out.println("Gen X:");
     printBoard(board);
     System.out.println("--------------------------\n\n");
-		System.out.println("Cell (1,0) has " + countNeighbours(board,0,0) + " neighbors");
+		// System.out.println("Cell (1,0) has " + countNeighbours(board,0,0) + " neighbors");//TEST
 
-    //board = generateNextBoard(board);
-    // System.out.println("Gen X+1:");
-    // printBoard(board);
-    // System.out.println("--------------------------\n\n");
-    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    board = generateNextBoard(board);
+    System.out.println("Gen X+1:");
+    printBoard(board);
+    System.out.println("--------------------------\n\n");
   }//end main()
 
 }//end class
