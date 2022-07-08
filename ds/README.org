@@ -1,3 +1,0 @@
-* Data Structures in a High Level Language
-
-Place all assignments for the Data Structures class in this folder as directed by the course instructors.
