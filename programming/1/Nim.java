@@ -52,3 +52,8 @@ public class Nim
 		}
 		
 	}
+
+/**
+ * Room #   (7//22)
+ * collaborators: Ashley Ufret
+ */
