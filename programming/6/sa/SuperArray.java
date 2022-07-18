@@ -3,11 +3,10 @@ import java.io.*;
 import java.util.*;
 
 /**
- * SuperArrayKate by Team KateisAwesome
- * Saranii Muller  
- * collaborators: Ashley Ufret, Kate Maschmeyer, Nicole Cojuangco
- */
+ * SuperArrayKate by Team KateisAwesome  
 
+ * collaborators: Saranii Muller, Ashley Ufret, Kate Maschmeyer, Nicole Cojuangco
+ */
 
 
 /** ***** WHY DO WE WANT A SuperArray ANYWAY? ***** 
@@ -46,58 +45,61 @@ With a SuperArray, we can:
 (added toString() in Basic as I didn't see it listed)
 
 *
-* 	🔰***Basic***
+* ***Basic***
 * Add/write:
-* >✔️ #0:  SuperArray()
+* > #0:  SuperArray() ✅
 *     Basic constructor that:
       1. Creates a new array of size 10 and assign data to refer to it. 
       2. Sets the numberElements variable to 0.
-* >✔️ #1:   SuperArray(int size)
+* > #1:   SuperArray(int size) ✅
 *     Constructor that:
 *     1. Creates a new array of size and assign data to refer to it. 
       2. Sets the numberElements variable to 0.
-* > ✔️#2:   isEmpty()
+* > #2:   isEmpty() ✅
 *     return true if the SuperArray is empty, false otherwise.
-* > ✔️#3:  add(int value)
+* > #3:  add(int value) ✅
 *     adds value to the end of the SuperArray (after the last added element)
-* > ✔️#4:  toString() 
+* > #4:  toString()  ✅
 *    return a String version of SuperArray in human-readable format
 
-* 🎒***Intermediate ***
+* ***Intermediate ***
 * Add/write:
-* > ✔️#0: grow() 
+* > #0: grow()  ✅
 *   Enlarges the SuperArray. It should:
 *      Create a new array, 5 units larger
 *      Copy the old data to the new array
 *      Set the data instance variable to point to the new array
 *
 * Modify:
-* > ✔️#1: add(int value) 
+* > #1: add(int value)  ✅
 *   Modify code so that if the data array is filled it will:
 *     1. Grow the array using the grow method you just wrote.
 *     2. Add the new value to the array.
 * 
 * Add/write:
-* > ✔️#2: get(int index)
-*     return the value at location index 
+* > #2: get(int index)  ✅
+*    return the value at location index 
+* > #3: set(int index, int value)  
+*    set the element at index to value  
 *
 *
-* ✨***Advanced***
+* ***Advanced***
 * Write:
-* > #0: add(int index, int value) 
+* > #0: add(int index, int value)  ✅
 *     Adds value at location index. You should shift the data to create an open space if you need to and you can use grow() if you need to make the array larger.
-* > #1: remove(int index) 
+* > #1: remove(int index) ✅
     Removes the location at index by shifting all the elements after location index and subtracting one from numberElements
 *
 */
 
-public class SuperArrayKate
+
+public class SuperArray
 {
- 
-  //instance variables
+
+ //instance variables
   private int[] data;           // "interior"/"underlying" data container
   private int numberElements;   // number of "meaningful" elements
-  
+
  // ************ START BASIC ************
   
   // ~~~~~~~~~~~~~~~ CONSTRUCTORS ~~~~~~~~~~~~~~~
@@ -109,97 +111,104 @@ public class SuperArrayKate
   *  int[] myArr = new int[6]; // capacity of 6
   *  int[] myArr2 = new int[40]; // capacity of 40
   **/
-  public SuperArrayKate()
+  public SuperArray()
   {
-    // NOTE: variables are already declared above (likely lines 96 & 97); you only have to create/instantiate them
+     // NOTE: variables are already declared above (likely lines 96 & 97); you only have to create/instantiate them
     
-    // create an array of integers called data that has a capacity of 10
-    data = new int[10];//creates new array of capacity of 10 
-    
-    // set numberElements to 0  (we haven't stored any integers in our SuperArray yet) - (empty array with nothing in it)
-    numberElements = 0;
-    
-  } 
+    this.data = new int[10]; // data can fit 10 elements
+    this.numberElements = 0; // no elements actually filled yet
+  }
 
-  /** Basic #1: SuperArray(int size)
+    /** Basic #1: SuperArray(int size)
   *
   * overloaded constructor -- takes in an integer called size which specifies the initial capacity
   * EXAMPLE of setting capacity with regular array of integers
   *  int[] myArr = new int[6]; // capacity of 6
   *  int[] myArr2 = new int[40]; // capacity of 40
   **/
-  public SuperArrayKate( int size )
+  public SuperArray( int size )
   {
-     // NOTE: variables are already declared above (likely lines 96 & 97); you only have to create/instantiate them
-    
-    // create an array of integers called data with capacity of size
-    data = new int[size];
-    
-    // set numberElements to 0  (we haven't stored any integers in our SuperArray yet)
-    numberElements = 0;
+    this.data = new int[size]; // data can fit size # of elements
+    this.numberElements = 0; // no elements actually filled yet
   }
 
-
-  // ~~~~~~~~~~~~~~~ METHODS ~~~~~~~~~~~~~~~
+ 
+ // ~~~~~~~~~~~~~~~ METHODS ~~~~~~~~~~~~~~~
 
   /** Basic #2: isEmpty() 
   *
   * Determines whether the SuperArray is empty (returns true if empty, false if not)
+  * 
+  * @return boolean
   */
   public boolean isEmpty()
   {
-    // write code determine whether the SuperArray is empty or not
-    /* YOUR CODE HERE */
-
-    if (numberElements == 0) {
-        return true;      
-    }
-    return false;
+    return this.numberElements == 0; // changed to this after demo/discussion
+    // if(this.numberElements == 0) { // we have added 0 elts
+    //   return true;
+    // } else {
+    //   return false; 
+    // }
   }
-  
+
   /** Basic #3: add(int value) add the value & increment (no special cases)
   * Intermediate #1: add(int value) Modify to deal with special cases
   *
-  * Takes in an integer called value, and appends the value to our SuperArray
+  * Takes in an integer called value, and appends the value to our SuperArray 
+  *
+  * Note: makes sure to check the size of underlying array & grow/copy if possible, then appends
   *
   * NOTE: You will write version of this for Basic, then modify it to deal with special cases in Intermediate
+  *
+  * @param value  integer, we want to append this to our SuperArray
   */
-//adds value to the end of the SuperArray (after the last added element)
   public void add( int value )
   {
-    // INTERMEDIATE: test to see if we need to grow, then grow    
-    if (numberElements == data.length)    {
-      grow(); //grow() is defined below see private void grow()
-    }
-    // BASIC: 
-    // add item int to "end" (after last input integer)
-    data[numberElements] = value;   
-    // increment numberElements
-    numberElements++;
-  }
-//if the number of elements = data.length of array then you have to grow
+    // test to see if we need to grow, then grow
+  
+    if(this.data.length == this.numberElements) { // we are currently at capacity
+      //System.out.println("About to grow array");
+      grow(); // grow the array first
+     }
+    
+     //System.out.println("Added " + value + " at location " + numberElements);
+
+    // NOTE: if numberElements fill in an array, then the last element is at (numberElements - 1).  We add the next value at the numberElements index.
+    this.set(this.numberElements, value);
+    //this.data[this.numberElements] = value; // add value to end 
+    this.numberElements++; // make sure we update our count
+
+  }//end add()
+
+  
+
   /** Basic #4: toString() 
   *
   * Returns a human-friendly String for our SuperArray 
+  * Example: {7, 2, 15, 4}
+  *
+  * @return String, human-friendly version of SuperArray
   */
   public String toString()
   {
-    // return a String version of SuperArray that is human-readable - ie when this prints what do you want it to look like? 
-    // EXAMPLE array: int[] highScores = {99,98,98,88,68};
-    //next line starts what human read will  look like
-    String sArr = "{";
-    //next line traverses array to pull elements to "see"
-    for(int i = 0; i < numberElements; i++) {
-      //this then reassigns sArr  with the traversal
-      sArr = sArr + data[i] + ", "; 
+    String sArr = ""; // initialize to empty String so that concatenated integers will be casted to Strings
+    sArr = sArr + "["; // starting to print as array
+    for(int i = 0; i < this.numberElements; i++) {
+      if(i == 0) { // starting element
+        sArr = sArr + this.get(i);
+      } else {
+         sArr = sArr + ", " + this.get(i);
+      }
     }
-    // re assigns sArr to "add in" prior
-    sArr = sArr + "}";
-    return sArr; 
-  }
-//system.out.println(sa)
+    sArr = sArr + "]"; // end nicely-formatted array
+    
+    return sArr;
+  }//end toString()
+
 
  // ************ END BASIC ************
+
+
 // ************ START INTERMEDIATE ************ 
 
   /** Intermediate #0: grow()
@@ -209,105 +218,134 @@ public class SuperArrayKate
   *   2. Copy elements from old array into new one
   *   3. Set data equal to your new array
   */
+   // ✅ SWITCHED BACK TO PRIVATE AFTER TESTING
   private void grow()
   {
-    
-    // create a new array that is 5 units larger (as specified!)
-
-    //temp is new array , data is old array , + 5 increases by 5
-    int temp[] = new int[data.length + 5]; 
+    //System.out.println("Growing array");
+    // create a new array that is 5 units larger (as specified!)  
+    int[] grownArr = new int[this.data.length + 5];
 
     // copy elements from old array into new one
-    //traverses old array
-    for(int i = 0; i < numberElements; i++) {
-      //sets old array data per index to temp
-      temp[i] = data[i];    
+    for(int i = 0; i < this.numberElements; i++) {
+      //grownArr[i] = this.data[i];
+      grownArr[i] = this.get(i);
     }
-    // set data equal to your new array
-    data = temp;
-    
-  }
 
-  /** Intermediate #1: Go back up to add(int value) and modify it to deal with special cases (if you need to grow, then grow) **/
-  //if the number of elements is the same as the size of array then would need to grow the array to accommodate new info
-  
-  
-  
+    this.data = grownArr;
+    
+  }//end grow()
+
+
+   /** Intermediate #1: Go back up to add(int value) and modify it to deal with special cases (if you need to grow, then grow) **/
+
   /** Intermediate #2: get(index)
   *
-  * Takes in an integer, index, and returns the value at that index
+  * Takes in an integer called index, and returns the value at that index
+  * If we have not stored a value at that index, prints error message, will return Integer.MIN_VALUE
+  *
+  * @param   index   integer, we want to determine value at this index 
+  * @return  integer, value at given index (if index does not exist, return Integer.MIN_VALUE)
   */
-  //telling what number is in location of indicated index
   public int get(int index)
   {
-    // return the value stored at the specifed index - the called index comes in driver file
-      // if the index point is larger than the data point
-      if(index > data.length) {
-        //then print
-        System.out.println("Index does not exist, returning Integer.MIN_VALUE");
-        //returns what java defines as the smallest possible integer there is which is nothing recognisable to what you are looking for
-        return Integer.MIN_VALUE;
-      }
-    //otherwise return the data you want
-    return data[index];
-
+    if(index > this.numberElements) {
+      System.out.println("Index is out of bounds");
+      return Integer.MIN_VALUE;
+    }
+    return this.data[index];
   }
+
+  /* Intermediate #3: set(int index, int value)  
+  *    set the element at index to value  
+  *
+  */
+  public void set(int index, int value) {
+    this.data[index] = value;
+  }
+
+  
   // ************ END INTERMEDIATE ************
+
 
   // ************ START ADVANCED ************ 
 
+  
    /** Advanced #0: add(index, value)
   *
   * Takes in an integer called index and an integer called value.  
+  * NOTE: gaps are not allowed in this version of  SuperArray - if index > numberElements (past appending the value to the end of the array, warning statement will be printed and nothing will be added)
+  * 
+  *
+  * @param  index  integer, location in array to add specified value 
+  * @param  value  integer, value to add at specified index
   */
   public void add(int index, int value)
   {
-    // see if there's enough room
-   if(index > numberElements || index < 0) { // NOT ALLOWED -- no gaps allowed!
-     System.out.println("Index out of bounds!");
-   } else {
+    // NOT ALLOWING GAPS
+    // while(index >= this.data.length) { // 
+    //   System.out.println("Increasing capacity to reach desired index");
+    //   grow();
+    // }
 
+    if(index > this.numberElements || index < 0) {
+      System.out.println("Index out of bounds. Lowest index available for adding to array: 0, Greatest index available for adding to array: " + numberElements);
+    
+    } else {
+      
       if(this.data.length == this.numberElements) { // we are currently at capacity 
         grow();
-      } 
-
-      // shift elements toward the end of the array
-      for(int i = numberElements - 1; i >= index; i--) {
-        data[i+1] = data[i];//this shuffles to the next index spot
       }
-       // insert new element
-      /* YOUR CODE HERE */
-       data[index] = value;
-  
+
+       // shift elements toward the end of the array
+      for(int i = this.numberElements - 1; i >= index; i--) { // start at last element, move inward
+        //System.out.println("Setting location " + (i+1) + " to " + this.get(i));
+        //this.data[i+1] = this.get(i);
+        this.set(i+1, this.get(i));
+      }
+
+      // insert new element
+      // System.out.println("Inserting " + value + " at location " + index);
+      this.set(index, value);
+      //this.data[index] = value;
+
       // increment numberElements
-      /* YOUR CODE HERE */ 
-       numberElements++; //adds 1 to the number of elements 
-     
-   }
+      this.numberElements++;
+      
+      // NO GAPS:
+      // this.numberElements = Math.max(index+1, this.numberElements + 1);
+    }
   }
- 
+
+
   /** Advanced #1: remove(int index) 
   *
   * Takes in an integer called index and removes the value at the given index. 
+  * If index is out of bounds, print error message and remove nothing
+  *
+  * @param index   integer, we'll remove value at given index 
   */
   public void remove(int index)
   {
-    // shift items down to remove the item at index
-    if(index > numberElements - 1 || index < 0) { // NOT ALLOWED
-     System.out.println("Index out of bounds!");
-   } else {
-      for(int i = index; i < numberElements - 1; i++) {
-        data[i] = data[i+1];//shuffles data down
+    if(index < numberElements && index >= 0) { // valid index
+      // shift items down to remove the item at index
+      for(int i = index; i < numberElements-1; i++) {
+        //this.data[i] = this.get(i+1);
+        this.set(i, this.get(i+1));
       }
-      // subtract 1 from numElements;
-      numberElements--;
 
+      // reduce numberElements by 1;
+      this.numberElements--;
+      
+    } else {
+       System.out.println("Index out of bounds. Lowest index available for removal: 0, Greatest index available for removal: " + (numberElements-1));
     }
+ 
   }
 
   // ************ END ADVANCED ************
 
- //return Stringified version of this Object,
+
+  //return Stringified version of this Object,
   // with extra debugging info
   //(helper method for debugging/development phase)
   public String debug()
@@ -321,11 +359,5 @@ public class SuperArrayKate
     s = s + "\n";
     return s;
   }//end debug()
-
-
-
-
-
-
-  
+ 
 }//end class
