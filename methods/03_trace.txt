@@ -1,0 +1,42 @@
+Team Room 2 :: Yeidy, Kate, David M, Ashley
+Methods - Summer 2022
+
+CODE TRACING in the classroom
+======================================
+
+
+PROS: 
+---------------------------------------
+Code Tracing offers ability to dive into what is going on in the program before code is introduced; lets you work out complicated expressions (like the recursive method) and discuss different approaches, questions, components etc.; promotes collaboration from all members of a group offering different perspectives. Makes thinking visible making it concrete; Provides a reference point to go back to if you get stuck during coding; Gives us the chance to clarify misconceptions in the task or the approach in a visual format before code syntax is added on; Allows the teacher to see what the students are thinking as they trace through the program; Gives teachers a way to have students demonstrate their understanding of CS concepts and practices and their understanding how to code/program separatly.
+
+
+CONS:
+---------------------------------------
+? <general negative aspects of incorporating code or algorithm tracing into a CS course, from your perspective>
+
+
+BEST FOR: 
+---------------------------------------
+activities involving computations (mathematical expressions) - commenting on our math work can be connected to commenting on our coding; loops and recursion in which you need to keep track of variables as they change (frequently); showing a student's understanding of concepts and allowing them to feel successful even if they are struggling with syntax/language; 
+
+
+LEAST-SUITED TO:
+---------------------------------------
+Not detrimental, but maybe less needed for simple or less complex coding tasks/programs;
+
+
+PROVEN PRO-TIPS: 
+---------------------------------------
+Practice live tracing before we present to students so we can prepare for misconceptions/questions that students might have; color-coding and making sure everyone is on the same page as to what the colors mean;
+providing examples of Types of Diagrams, "exemplar" drawings to refer to with lables and code side by side. 
+do a live tracing with students before asking them to complete it indepently
+allow them to include their diagram with their project to demonstrate understanding, and help you identify misconceptions vs errors in their code based on their planning doc, encourage students to update or revise their drawing if they change their approach or catch a mistake.
+
+RESOURCES:
+---------------------------------------
+< any links, reading titles, names, etc. you have find useful >
+
+
+OTHER:
+---------------------------------------
+< anything you like, not already covered in prior prompts. >

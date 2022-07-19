@@ -1,0 +1,49 @@
+Team 1 (elementary): Alana, Ashley, Théa, Vanessa and Yeidy 
+
+PreReq: CS use computational thinking - at this point we've already introduced pattern recognition. 
+
+Topic: Loops
+
+Essential Question: What is a loop?
+
+Target Audience: 3rd Grade
+
+Lesson objective: Student will define the concept of loops. 
+
+Duration: 1 class period (45 minutes)
+
+Warm up (Hook) - time: 7 min.
+
+Show the students a visual of a loop (real-world connection) - teacher walks around desks 1,2, and 3 over and over again and asks students to count how many times is the teacher walking around the table. 
+
+-Brainstorm real-world examples of repetitive tasks (brushing teeth, tying shoes, using a vacuum)
+- setting the alarm clock to ring everyday
+- repeating a pattern in a craft - like bracelets or sewing
+
+**Connect this to computational thinking skill - pattern recognition**
+Ask students to turn and talk - "Remember computer sciencetists use computational thinking skills to solve problems. What computational thinking skills do you think we might use to figure out when we need a loop?"
+
+Show Flocabulary Video on Loops https://www.flocabulary.com/unit/coding-for-loops/ 
+(only show parts of the video, stop when it gets to for loops)
+
+
+Mini-Lesson (Teacher Model/Think Aloud) - time: 7 min.
+Unplugged guided activity: Watch videos showing a dance routine. 
+Resource: http://www.helloruby.com/play/39 (simplier version)
+Resource: https://studio.code.org/s/course1/lessons/12/levels/1
+
+Guided Practice - time: 5 min.
+Students will take an image (from code.org) of dance moves, students and teacher can work together to annotate and identify patterns that are repeated.
+Resource: https://code.org/curriculum/course1/12/Teacher#Activity1
+
+Independent Practice - time - 15 min.
+Students will work in partnerships/groups to create their own dances that include loops.
+Resource: https://hello-ruby-production.s3.amazonaws.com/uploads/exercise_material/attachment/50/Task_9.pdf
+
+Assessment (unplugged): 5 min.
+Students will identify additional loops by annotating the patterns and label loops using the Getting Loopy assessment sheet (unplugged).
+Resource: https://code.org/curriculum/course1/12/Teacher#Assessment
+
+Closing - time: 5 min.
+Wrap up the lesson by having students turn and talk to share with a partner about what a loop is and their uses in the real world. Then call on a student pair to share to whole class or teacher can restate the learning objective with the whole class if time runs out.
+
