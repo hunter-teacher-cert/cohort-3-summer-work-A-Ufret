@@ -1,3 +1,8 @@
+/* Task (July 19-20, 2022): SortSearch and SortSearch Driver
+Group: Room 2
+Collaborators: Yeidy Levels, Kate Maschmeyer, Davide Moste, and Ashley Ufret */
+
+
 import java.io.*;
 import java.util.*;
 
@@ -91,7 +96,12 @@ public class SortSearch{
        
     */
     public void sort(){
-
+    for (int i = 0; i < data.size(); i++) {
+      int minIndex = findSmallestIndex(i);
+      int temp = get(i);//need to create a variable to store the value that lives in the current index 'i' while we move the minIndex value over to the current index. 
+      data.set(i, get(minIndex));
+      data.set(minIndex, temp);
+    }
 
     }
 
@@ -107,8 +117,7 @@ public class SortSearch{
        This algorithm works on any ArrayList.
     */
     public int linearSearch(int value){
-	
-	
+
 	    return 0; // replace this return
     }
     
