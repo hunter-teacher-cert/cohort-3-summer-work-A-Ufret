@@ -107,9 +107,19 @@ public class SortSearch{
 
 
 
-    /* Search project starts here */
-    
-    /**
+    /* Search project starts here 
+Search Project:
+  1. Complete the linear search (BASIC)
+  2. Complete the binary search (Intermediate)
+  3. Complete the recursive version of binary search (Advanced)
+
+    Collaborators: Ashley Ufret, Taylor Grant-Knight, SueAnn "Suzie" Seccafico, Usman Ahmed, Yeidy Levels 
+
+
+
+*/
+
+     /**
        performs a linear search. Returns the index of the first occurence of
        value in the ArrayList data or -1 if not found.
        This works by starting at the first element and searching one element at a time 
@@ -117,9 +127,15 @@ public class SortSearch{
        This algorithm works on any ArrayList.
     */
     public int linearSearch(int value){
-
-	    return 0; // replace this return
+      for (int i=0; i<data.size(); i++){
+        if (value == data.get(i)){
+          return i;    
+        }
+      }
+      return -1;
     }
+	
+	 // replace this return
     
     /**
        Implement a binary search as specified by the comments
@@ -127,41 +143,92 @@ public class SortSearch{
        This algorithm only works on sorted ArrayLists.
     */
     public int binarySearch(int value){
+      int low = 0;
+      int high = data.size()-1;
+      int middle = (low + high)/2;
+      int currentIndex = 0;
+      int currentItem = data.get(currentIndex);
+      int result = -1;
+      while (low <= high){
+        middle = (low + high)/2;
+        currentIndex = middle;
+        currentItem = data.get(currentIndex);
+        if (currentItem == value){
+          return currentIndex;
+        }
+        else{
+          if (currentItem > value){
+            high = currentIndex - 1;
+            // Also change middle
+          }
+          else{
+            low = currentIndex + 1;
+            // Also change middle
+          }
+        }  
+      }
+      return -1;
+    }
+
 
 	// create assign variables  representing the high, low and middle indices 
 	// while we're not done:
 	//   if the item is at data.get(middle), return middle
 	//   otherwise, update high, low, and middle
 
-	    return 0;
+	// return 0;
 	    
-    }
+ //    }
     
     /**
        Implement a RECURSIVE binary search as specified by the comments
        
        This algorithm only works on sorted ArrayLists.
     */
-
+//the parameters in binarySearchRecursive tell us that when running the program we have to include values in the driver for value, lowIndex, & highIndex 
     public int binarySearchRecursive(int value, int lowIndex, int highIndex){
-
-	// refer to class discussion
-	
-	    return 0;
-	    
+      int middleIndex = (lowIndex + highIndex)/2;
+      // Base case 1: Don't find it
+      if (lowIndex > highIndex){//ending condition
+        return -1;
+      }
+      // Base case 2: You found it
+      else if (data.get(middleIndex) == value){
+        return middleIndex;
+      }
+      // Recursive case 1: Value is below middle
+      else if (data.get(middleIndex) > value ){
+        return binarySearchRecursive(value, lowIndex, middleIndex -1);//the new high index (because it's a binarySearch). -1 still captures all (because we already checked the middleIndex ==value) 
+      }
+      // Recursive case 2: Value is above middle
+      else { //less than the value
+        return binarySearchRecursive(value, middleIndex +1, highIndex);
+      }
     }
     
 	
     public String toString(){
-	    return ""+data;
+	return ""+data;
     };
 
 
     public void builtinSort(){
-	    Collections.sort(data);
+	Collections.sort(data);
 	
     }
     
 
     
 }
+
+
+// int small = -1;
+//       int temp = 0;
+//       for (int i = 0; i<data.size(); i++){
+//         for (int j = i + 1; j<data.size(); j++){
+//           small = i;
+//             if(this.data.get(j)<this.data.get(small)){
+//               temp = this.data.get(i);
+//               this.data.get(i) = this.data.get(j);
+//               this.data.get(j) = temp;
+            
