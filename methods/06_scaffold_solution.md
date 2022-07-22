@@ -30,7 +30,7 @@ Note:Students would get the solution to the loop if there are errors before codi
 ![repeat](repeat.png)
 
 b) Intermediate: Students will select several scratch blocks that will demonstrate a loop in the story. They would be given additional blocks that would be optional additions to demonstrate the loop, in addition to blocks would not be appropriate.
-Solution: Students would be able to identify and discard blocks that would be inappropriate. Then, they would put the remaining blocks in order and explain how the program would demonstrate the loop in the story. They would have the main section: Solution: Students will put the when green flag clicked on top, then put the say/start sound block inside the repeat block. They will have the say/start sound block, include the part of the text that is repeated in the text. They may have additional features such as costumes/sprites for the chair, bed with the different sizes.
+Solution: Students would be able to identify and discard blocks that would be inappropriate. Then, they would put the remaining blocks in order and explain how the program would demonstrate the loop in the story. They would have the main section: Students will put the when green flag clicked on top, then put the say/start sound block inside the repeat block. They will have the say/start sound block, include the part of the text that is repeated in the text. They may have additional features such as costumes/sprites for the chair, bed with the different sizes (with change-size block)
 They would use this plan to complete the project on https://scratch.mit.edu, then run/debug as necessary.
 ![change-size-by](change-size-by.png)
 ![start-sound@4x](start-sound@4x.png)
@@ -40,7 +40,8 @@ They would use this plan to complete the project on https://scratch.mit.edu, the
 ![when-flag-clicked](when-flag-clicked.png)
 
 c) Advanced: Students would have all blocks on scratch available to choose from to plan code to demonstrate the pattern in the story using a loop. They will retell the story to determine what number they would have to show in the repeat block to have a loop that shows how many items Goldilocks tried something in the bears home (until she found the one that was just right). 
-Solution:
+
 Solution: Students would be able to identify and discard blocks that would be inappropriate. Then, they would put the remaining blocks in order and explain how the program would demonstrate the loop in the story. They would have the main section: Solution: Students will put the when green flag clicked on top, then put the say/start sound block inside the repeat block.
-The solution would include the repeat loop with the number of repitions == to the number of times Goldilocks repeats the loop of this one is "too big, this one is too small, this one is juuust right!" This can vary depending on the version of the story used, but for the example text provided in the lesson resources it would be Repeat 3 (porridge, chair, bed).
-They will have the say/start sound block, include the part of the text that is repeated in the text. They may have additional features such as costumes/sprites for the chair, bed with the different sizes.
+The solution would include the repeat loop with the number of repitions == to the number of times Goldilocks repeats the loop of this one is "too big, this one is too small, this one is just right!" This can vary depending on the version of the story used, but for the example text provided in the lesson resources it would be Repeat 3 (porridge, chair, bed).
+They will have the say/start sound block, include the part of the text that is repeated in the text. They may have additional features (such as costumes/sprites for the chair, bed with the different sizes). 
+If time permits: The advanced students would have included a second loop for pattern in the dialogue after the bear's get back and discover their items have been tampered with.
