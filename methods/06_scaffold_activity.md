@@ -21,11 +21,14 @@ UDL/Differentiation Options:
 *All or select students can work in strategic pairs as driver/navigator (this can allow for all students to access more challenging tasks)
 
 Leveled Tasks:
+
 a) Basic: Students are given 5-6 Scratch blocks that are required to show a loop. The blocks are out of order and they need to reorder those blocks to show a loop/repetition in the story. Note: Students would get the solution to the loop if there are errors before coding loop to reinforce concept/connection between a pattern in a story and a loop in CS, and between the function of a loop and the repeat block in coding with blocks. 
 
 ![when-flag-clicked](when-flag-clicked.png)
 ![say](say.png)
 ![repeat](repeat.png)
+
+Scratch Stater Code: [https://scratch.mit.edu/projects/716320984]
 
 b) Intermediate: Students will select several scratch blocks that will demonstrate a loop in the story. They would be given additional blocks that would be optional additions to demonstrate the loop, in addition to blocks would not be appropriate.
 

@@ -45,3 +45,6 @@ Solution: Students would be able to identify and discard blocks that would be in
 The solution would include the repeat loop with the number of repitions == to the number of times Goldilocks repeats the loop of this one is "too big, this one is too small, this one is just right!" This can vary depending on the version of the story used, but for the example text provided in the lesson resources it would be Repeat 3 (porridge, chair, bed).
 They will have the say/start sound block, include the part of the text that is repeated in the text. They may have additional features (such as costumes/sprites for the chair, bed with the different sizes). 
 If time permits: The advanced students would have included a second loop for pattern in the dialogue after the bear's get back and discover their items have been tampered with.
+
+
+
